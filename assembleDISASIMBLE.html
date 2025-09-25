@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Unit Assembly & Disassembly Flowcharts</title>
+
+
+
+
+<script src="tailwind.js"></script>
+<link href="inter-font.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* A light gray background */
+        }
+        .flowchart-container {
+            background-color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border: 1px solid #e5e7eb;
+            width: 100%;
+            max-width: 48rem; /* Increased max-width for two charts */
+            margin-bottom: 2rem;
+        }
+        .flowchart-shape {
+            stroke: #4b5563; /* Gray-700 for borders */
+            stroke-width: 2;
+            fill: #ffffff; /* White fill for shapes */
+        }
+        .flowchart-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: #1f2937; /* Gray-800 for text */
+            text-anchor: middle;
+            dominant-baseline: central;
+            pointer-events: none; /* Make text non-interactive */
+        }
+        .flowchart-line {
+            stroke: #4b5563;
+            stroke-width: 2;
+            fill: none;
+            marker-end: url(#arrowhead);
+        }
+        .flowchart-label {
+            font-size: 14px;
+            font-weight: 600;
+            fill: #1f2937;
+        }
+        /* Style for multi-line text */
+        tspan {
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <!-- Assembly Flowchart -->
+    <div class="flowchart-container">
+        <h1 class="text-2xl font-bold text-center text-gray-800 mb-2">Assembling a System Unit</h1>
+        <p class="text-center text-gray-500 mb-8">A step-by-step guide for building a computer.</p>
+        
+        <div class="flex justify-center">
+            <svg width="100%" height="auto" viewBox="0 0 500 1200" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#4b5563" />
+                    </marker>
+                </defs>
+
+                <!-- Shapes and Text -->
+                <g transform="translate(250, 50)"><ellipse class="flowchart-shape" cx="0" cy="0" rx="80" ry="30"/><text class="flowchart-text" x="0" y="0">Start</text></g>
+                <g transform="translate(250, 145)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text"><tspan x="0" dy="-0.6em">Gather All</tspan><tspan x="0" dy="1.2em">Components</tspan></text></g>
+                <g transform="translate(250, 260)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text"><tspan x="0" dy="-0.6em">Install CPU & RAM</tspan><tspan x="0" dy="1.2em">on Motherboard</tspan></text></g>
+                <g transform="translate(250, 375)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text"><tspan x="0" dy="-0.6em">Install Motherboard</tspan><tspan x="0" dy="1.2em">into Case</tspan></text></g>
+                <g transform="translate(250, 490)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text">Install PSU</text></g>
+                <g transform="translate(250, 605)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text"><tspan x="0" dy="-0.6em">Install Storage</tspan><tspan x="0" dy="1.2em">& Expansion Cards</tspan></text></g>
+                <g transform="translate(250, 720)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text"><tspan x="0" dy="-0.6em">Connect All Power</tspan><tspan x="0" dy="1.2em">& Data Cables</tspan></text></g>
+                <g transform="translate(250, 850)"><path class="flowchart-shape" d="M 0 -60 L 130 0 L 0 60 L -130 0 Z"/><text class="flowchart-text"><tspan x="0" dy="-0.6em">System POSTS</tspan><tspan x="0" dy="1.2em">Successfully?</tspan></text></g>
+                <g transform="translate(250, 975)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text">Close Case</text></g>
+                <g transform="translate(80, 975)"><rect class="flowchart-shape" x="-70" y="-35" width="140" height="70" rx="8"/><text class="flowchart-text"><tspan x="0" dy="-0.6em">Troubleshoot</tspan><tspan x="0" dy="1.2em">Connections</tspan></text></g>
+                <g transform="translate(250, 1090)"><ellipse class="flowchart-shape" cx="0" cy="0" rx="80" ry="30"/><text class="flowchart-text" x="0" y="0">End</text></g>
+                
+                <!-- Connection Lines -->
+                <path class="flowchart-line" d="M 250 80 V 110" />
+                <path class="flowchart-line" d="M 250 180 V 225" />
+                <path class="flowchart-line" d="M 250 295 V 340" />
+                <path class="flowchart-line" d="M 250 410 V 455" />
+                <path class="flowchart-line" d="M 250 525 V 570" />
+                <path class="flowchart-line" d="M 250 640 V 685" />
+                <path class="flowchart-line" d="M 250 755 V 790" />
+                <path class="flowchart-line" d="M 250 910 V 940" />
+                <path class="flowchart-line" d="M 250 1010 V 1060" />
+
+                <!-- Decision Path -->
+                <text class="flowchart-label" x="260" y="930">Yes</text>
+                <path class="flowchart-line" d="M 120 850 H 80" />
+                <text class="flowchart-label" x="95" y="840">No</text>
+                <path class="flowchart-line" d="M 80 870 V 940" />
+                <path class="flowchart-line" d="M 80 1010 V 1040 H 200 L 225 890" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Disassembly Flowchart -->
+    <div class="flowchart-container">
+        <h1 class="text-2xl font-bold text-center text-gray-800 mb-2">Disassembling a System Unit</h1>
+        <p class="text-center text-gray-500 mb-8">A step-by-step guide for taking apart a computer.</p>
+        
+        <div class="flex justify-center">
+            <svg width="100%" height="auto" viewBox="0 0 500 1100" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                    <marker id="arrowhead-dis" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#4b5563" />
+                    </marker>
+                </defs>
+                 <!-- Shapes and Text -->
+                <g transform="translate(250, 50)"><ellipse class="flowchart-shape" cx="0" cy="0" rx="80" ry="30"/><text class="flowchart-text" x="0" y="0">Start</text></g>
+                <g transform="translate(250, 145)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text"><tspan x="0" dy="-0.6em">Power Off &</tspan><tspan x="0" dy="1.2em">Unplug System</tspan></text></g>
+                <g transform="translate(250, 260)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text">Open Case</text></g>
+                <g transform="translate(250, 375)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text">Disconnect All Cables</text></g>
+                <g transform="translate(250, 490)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text"><tspan x="0" dy="-0.6em">Remove Expansion</tspan><tspan x="0" dy="1.2em">Cards & Drives</tspan></text></g>
+                <g transform="translate(250, 605)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text">Remove PSU</text></g>
+                <g transform="translate(250, 720)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text"><tspan x="0" dy="-0.6em">Remove</tspan><tspan x="0" dy="1.2em">Motherboard</tspan></text></g>
+                <g transform="translate(250, 835)"><rect class="flowchart-shape" x="-110" y="-35" width="220" height="70" rx="8"/><text class="flowchart-text"><tspan x="0" dy="-0.6em">Remove CPU</tspan><tspan x="0" dy="1.2em">& RAM</tspan></text></g>
+                <g transform="translate(250, 950)"><ellipse class="flowchart-shape" cx="0" cy="0" rx="80" ry="30"/><text class="flowchart-text" x="0" y="0">End</text></g>
+
+                <!-- Connection Lines -->
+                <path class="flowchart-line" d="M 250 80 V 110" style="marker-end: url(#arrowhead-dis);"/>
+                <path class="flowchart-line" d="M 250 180 V 225" style="marker-end: url(#arrowhead-dis);"/>
+                <path class="flowchart-line" d="M 250 295 V 340" style="marker-end: url(#arrowhead-dis);"/>
+                <path class="flowchart-line" d="M 250 410 V 455" style="marker-end: url(#arrowhead-dis);"/>
+                <path class="flowchart-line" d="M 250 525 V 570" style="marker-end: url(#arrowhead-dis);"/>
+                <path class="flowchart-line" d="M 250 640 V 685" style="marker-end: url(#arrowhead-dis);"/>
+                <path class="flowchart-line" d="M 250 755 V 800" style="marker-end: url(#arrowhead-dis);"/>
+                <path class="flowchart-line" d="M 250 870 V 920" style="marker-end: url(#arrowhead-dis);"/>
+            </svg>
+        </div>
+    </div>
+
+</body>
+</html>
